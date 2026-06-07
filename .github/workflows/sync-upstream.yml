@@ -18,12 +18,12 @@ jobs:
     steps:
       # Step 1: 检出你的目标仓库
       - name: Checkout target repo
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
       # Step 2: 使用开源 Action 同步上游
       - name: Sync upstream changes
         id: sync
-        uses: aormsby/Fork-Sync-With-Upstream-action@v3.4
+        uses: aormsby/Fork-Sync-With-Upstream-action@v3.4.1
         with:
           upstream_sync_repo: maillab/cloud-mail # 【注意】替换为上游的原仓库地址，例如 torvalds/linux
           upstream_sync_branch: main # 【注意】替换为上游你要同步的分支，通常是 main 或 master
